@@ -1,5 +1,71 @@
 .m-menu-list {
+  margin-top: 10px;
+
   &__item + &__item {
     margin-top: 10px;
+  }
+
+  &__item {
+    position: relative;
+
+    & ul {
+      display: none;
+    }
+
+    & ul li {
+      & .m-button-menu {
+        &:before {
+          content: "";
+          width: 9px;
+          height: 1px;
+          background: $c-gray-middle;
+          position: absolute;
+          top: 19px;
+          left: -10px;
+        }
+      }
+
+      &:after {
+        content: "";
+        width: 1px;
+        background: $c-gray-middle;
+        position: absolute;
+        left: 8px;
+        height: calc(100% + 10px);
+        top: 20px;
+      }
+
+      &:first-child:before{
+        content: "";
+        width: 1px;
+        background: $c-gray-middle;
+        position: absolute;
+        left: 8px;
+        height: 30px;
+        top: -10px;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+
+    & > ul > li > ul > li {
+      &:after {
+        background: $c-gray-light;
+      }
+
+      &:first-child:before {
+        background: $c-gray-light;
+      }
+
+      & .m-button-menu:before {
+        background: $c-gray-light;
+      }
+    }
+
+    &_l {
+      padding-left: 17px;
+    }
   }
 }

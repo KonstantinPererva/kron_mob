@@ -1,5 +1,5 @@
 let gulp = require('gulp'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     csso = require('gulp-csso'),
     notify = require('gulp-notify'),
     babel = require("gulp-babel"),

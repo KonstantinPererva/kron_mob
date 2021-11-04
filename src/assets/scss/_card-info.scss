@@ -1,0 +1,19 @@
+.card-info {
+  &__property {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    color: $c-gray-middle;
+  }
+
+  &__value {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2E4D9D;
+  }
+}

@@ -29,4 +29,14 @@
     bottom: 0;
     margin: auto;
   }
+
+  &_t-bd{
+    background: #fff;
+    border: 1px solid $c-gray-middle;
+  }
+
+  &_t-bl{
+    background: #fff;
+    border: 1px solid $c-gray-light;
+  }
 }

@@ -1,0 +1,22 @@
+.card-price {
+  display: flex;
+
+  &__property {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 22px;
+    color: $c-gray-middle;
+    margin-right: 8px;
+  }
+
+  &__value {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: $c-m-blue;
+  }
+}

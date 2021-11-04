@@ -1,0 +1,15 @@
+.m-button-void {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 100%;
+  color: #fff;
+
+  &__icon {
+    margin-right: 12px;
+  }
+}

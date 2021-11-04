@@ -1,0 +1,39 @@
+.filter-box {
+  position: relative;
+
+  & + & {
+    margin-top: 20px;
+  }
+
+  &__hold {
+    display: flex;
+    align-items: center;
+    padding: 0 28px 0 0;
+  }
+
+  &__property {
+    flex-shrink: 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: $c-text-main;
+  }
+
+  &__value {
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+    color: $c-m-blue;
+  }
+
+  &__indicator {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.99997 7.42017C5.7849 7.42017 5.56987 7.33805 5.4059 7.17417L0.24617 2.01439C-0.0820565 1.68616 -0.0820565 1.154 0.24617 0.825904C0.574263 0.497811 1.10632 0.497811 1.43457 0.825904L5.99997 5.39156L10.5654 0.826063C10.8936 0.49797 11.4256 0.49797 11.7537 0.826063C12.0821 1.15416 12.0821 1.68632 11.7537 2.01455L6.59404 7.17433C6.42999 7.33824 6.21495 7.42017 5.99997 7.42017Z' fill='%232E4D9D'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -1,0 +1,11 @@
+.filter-list {
+  display: none;
+
+  &__item {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+    color: $c-m-blue;
+    margin-top: 10px;
+  }
+}
