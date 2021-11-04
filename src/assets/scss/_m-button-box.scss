@@ -1,0 +1,23 @@
+.m-button-box {
+  width: 76px;
+  height: 46px;
+  background: #fff;
+  text-align: center;
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 4px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 17px;
+    color: $c-text-main;
+  }
+}
