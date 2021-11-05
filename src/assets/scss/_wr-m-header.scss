@@ -1,0 +1,10 @@
+.wr-m-header {
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $c-m-blue;
+  padding: 8px 0;
+  z-index: 1001;
+}

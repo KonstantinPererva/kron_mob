@@ -14,60 +14,25 @@
         @@include('./component/header/_header.html')
 <!-- MAIN -->
         <main class="m-main">
-            @@include('./component/panel/_panel.html', {
+            @@include('./component/panel/_panel-detail.html', {
                 "items": [
                     {
-                    title:'Аксессуары',
-                    active: ''
-                    },
-                    {
-                    title:'Ароматизаторы воздуха',
+                    title:'Автомобильный освежитель воздуха AIR SURF Black ',
                     active: 'active'
                     }
                 ]
             })
+
 <!-- CONTAINER -->
             <div class="m-container">
-<!-- MENU CATALOG -->
-                @@include('./component/goods/_card.html', {
-                "items": [
-                    {
-                        title:'Автомобильный освежитель воздуха AIR SURF Black ',
-                        manufacturer: 'Doctor Marcus, Польша',
-                        code: '031289',
-                        package: '100',
-                        remainder: '3',
-                        num: 'BM-ZA1102',
-                        price: '12 155.15 грн'
-                    },
-                    {
-                        title:'Ароматизаторы воздуха',
-                        manufacturer: 'Doctor Marcus, Польша',
-                        code: '032549',
-                        package: '150',
-                        remainder: '102',
-                        num: 'BM-ZA1162',
-                        price: '11 195.64 грн'
-                    },
-                    {
-                        title:'Автомобильный освежитель воздуха AIR SURF Black ',
-                        manufacturer: 'Doctor Marcus, Польша',
-                        code: '031289',
-                        package: '100',
-                        remainder: '3',
-                        num: 'BM-ZA1102',
-                        price: '12 155.15 грн'
-                    },
-                    {
-                        title:'Ароматизаторы воздуха',
-                        manufacturer: 'Doctor Marcus, Польша',
-                        code: '032549',
-                        package: '150',
-                        remainder: '102',
-                        num: 'BM-ZA1162',
-                        price: '11 195.64 грн'
-                    }
-                ]})
+                <div class="detail">
+                    <div class="detail__img">
+                        ​<picture>
+                            <source srcset="mdn-logo.svg" type="image/svg+xml">
+                            <img src="mdn-logo.png" alt="">
+                        </picture>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -75,6 +40,9 @@
         @@include('./component/footer/_footer.html')
 
         @@include('./component/popups/_popup-filter.html')
+        @@include('./component/popups/_popup-add-order.html')
     </div>
+
+    <script src="./script/main.js"></script>
 </body>
 </html>

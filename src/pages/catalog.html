@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="m-wrapper">
+<!-- HEADER -->
+        @@include('./component/header/_header.html')
+<!-- MAIN -->
+        <main class="m-main m-main_search">
+            @@include('./component/panel/_panel.html', {
+                "items": [
+                    {
+                    title:'Аксессуары',
+                    active: ''
+                    },
+                    {
+                    title:'Ароматизаторы воздуха',
+                    active: 'active'
+                    }
+                ]
+            })
+<!--            <script-->
+<!--                    src="https://code.jquery.com/jquery-3.6.0.min.js"-->
+<!--                    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="-->
+<!--                    crossorigin="anonymous"></script>-->
+<!--            <input type="file" accept="image/*" capture="camera">-->
+<!--            <input type="text" x-webkit-speech />-->
+
+
+<!-- CONTAINER -->
+            <div class="m-container">
+<!-- FILTER INFO -->
+                <div class="filter-info">
+                    <div class="filter-info__list">
+                        <div class="button-filter-info"><span class="button-filter-info__text">Наименование: По алфавиту</span></div>
+
+                        <div class="button-filter-info"><span class="button-filter-info__text">Наименование: По алфавиту</span></div>
+
+                        <div class="button-filter-info"><span class="button-filter-info__text">Наименование: По алфавиту</span></div>
+                    </div>
+                </div>
+
+<!-- MENU CATALOG -->
+                @@include('./component/goods/_card.html', {
+                "items": [
+                    {
+                        title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                        manufacturer: 'Doctor Marcus, Польша',
+                        code: '031289',
+                        package: '100',
+                        remainder: '3',
+                        num: 'BM-ZA1102',
+                        price: '12 155.15 грн'
+                    },
+                    {
+                        title:'Ароматизаторы воздуха',
+                        manufacturer: 'Doctor Marcus, Польша',
+                        code: '032549',
+                        package: '150',
+                        remainder: '102',
+                        num: 'BM-ZA1162',
+                        price: '11 195.64 грн'
+                    },
+                    {
+                        title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                        manufacturer: 'Doctor Marcus, Польша',
+                        code: '031289',
+                        package: '100',
+                        remainder: '3',
+                        num: 'BM-ZA1102',
+                        price: '12 155.15 грн'
+                    },
+                    {
+                        title:'Ароматизаторы воздуха',
+                        manufacturer: 'Doctor Marcus, Польша',
+                        code: '032549',
+                        package: '150',
+                        remainder: '102',
+                        num: 'BM-ZA1162',
+                        price: '11 195.64 грн'
+                    }
+                ]})
+            </div>
+        </main>
+
+<!-- FOOTER -->
+        @@include('./component/footer/_footer.html')
+
+        @@include('./component/popups/_popup-filter.html')
+        @@include('./component/popups/_popup-add-order.html')
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>

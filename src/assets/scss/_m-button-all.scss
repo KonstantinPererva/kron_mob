@@ -1,0 +1,12 @@
+.m-button-all {
+  display: flex;
+  align-items: center;
+  height: 19px;
+  font-size: 12px;
+  line-height: 18px;
+  color: $c-m-blue;
+
+  &__icon {
+    margin-left: 8px;
+  }
+}

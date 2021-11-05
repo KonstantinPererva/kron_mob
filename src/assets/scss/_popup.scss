@@ -23,6 +23,7 @@
   }
 
   &__main {
+    position: relative;
     background: #fff;
     height: 100%;
     padding: 50px 0 0;
@@ -39,9 +40,10 @@
   }
 
   &__content {
-    padding: 10px 8px;
+    position: absolute;
+    top: 86px;
     height: calc(100% - 86px);
-    overflow-y: auto;
-    overflow-x: hidden;
+    width: 100%;
+    padding: 10px 8px;
   }
 }

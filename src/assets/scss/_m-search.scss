@@ -1,0 +1,40 @@
+.m-search {
+  padding: 6px 8px 0;
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    padding: 0 100px 0 10px;
+
+    @include placeholder {
+      font-size: 14px;
+      color: $c-text-main;
+    }
+  }
+
+  &__row {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+  }
+
+  &__substrate {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0,0,0,.5);
+  }
+}

@@ -4,4 +4,21 @@
   display: flex;
   justify-content: space-between;
   padding: 4px 8px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    width: 248px;
+
+    & span {
+      min-width: 0;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 12px;
+      line-height: 18px;
+      color: #fff;
+    }
+  }
 }

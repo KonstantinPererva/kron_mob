@@ -1,0 +1,47 @@
+.order-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+  padding: 4px 10px;
+  background: $c-gray-light;
+  border-radius: 5px;
+  color: $c-text-main;
+  border: 1px solid $c-gray-light;
+
+  & + & {
+    margin-top: 5px;
+  }
+
+  &.active {
+    color: $c-m-blue;
+    border: 1px solid $c-m-blue;
+    padding-left: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.7071 2.07023L4.43168 7.34528C4.04103 7.73601 3.40733 7.73601 3.01631 7.34528L0.293099 4.62187C-0.0976998 4.23115 -0.0976998 3.59738 0.293099 3.20658C0.683973 2.81571 1.31762 2.81571 1.70832 3.20643L3.7242 5.22234L8.29165 0.65486C8.68253 0.263987 9.31622 0.264283 9.70695 0.65486C10.0977 1.04566 10.0977 1.67921 9.7071 2.07023Z' fill='%232E4D9D'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
+
+  &_new {
+    background: #fff;
+    color: $c-m-blue;
+    border: 1px solid $c-m-blue;
+  }
+
+  &__title {
+    display: block;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  &__total {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    height: 24px;
+    background: $c-gray-middle;
+    border-radius: 30px;
+    color: #fff;
+  }
+}
