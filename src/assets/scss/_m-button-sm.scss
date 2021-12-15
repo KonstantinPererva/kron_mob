@@ -1,16 +1,14 @@
-.m-button-main {
-  min-height: 40px;
-  display: flex;
+.m-button-sm {
+  min-height: 30px;
+  display: inline-flex;
   align-items: center;
   padding: 0 10px;
   background: #FFFFFF;
-  border: 1px solid #2E4D9D;
+  border: 1px solid $c-m-blue;
   border-radius: 5px;
 
   &__icon {
     flex-shrink: 0;
-    width: 16px;
-    height: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,13 +18,8 @@
   &__text {
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 25px;
-    color: $c-text-main;
-  }
-
-  &_blue {
-    background: $c-m-blue;
-    color: #fff;
+    font-size: 12px;
+    line-height: 12px;
+    color: $c-m-blue;
   }
 }

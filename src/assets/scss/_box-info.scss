@@ -1,0 +1,26 @@
+.box-info {
+  background: #EAEAEF;
+  border-radius: 5px;
+  padding: 12px 8px;
+
+  & + & {
+    margin-top: 5px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #545454;
+    margin-bottom: 9px;
+  }
+
+  &__descr {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #545454;
+  }
+}

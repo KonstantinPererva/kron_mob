@@ -1,0 +1,32 @@
+.detail-characteristic {
+
+  &__row {
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+    
+    &:nth-child(odd) {
+      background: #EAEAEF;
+    }
+
+    & > span {
+      display: block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      color: #545454;
+      padding: 0 8px;
+
+      &:first-child {
+        width: 60%;
+      }
+
+      &:last-child {
+        width: 40%;
+        color: $c-m-blue;
+        text-align: right;
+      }
+    }
+  }
+}
