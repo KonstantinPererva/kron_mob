@@ -14,7 +14,7 @@
         @@include('./component/header/_header.html')
 <!-- MAIN -->
         <main class="m-main">
-            @@include('./component/panel/_panel-detail.html', {
+            @@include('./component/panel/_panel-back.html', {
                 "items": [
                     {
                     title:'Автомобильный освежитель воздуха AIR SURF Black ',
@@ -121,8 +121,24 @@
                     </div>
 
                     <div class="detail__button">
-                        <div class="m-button-main m-button-main_blue button-add-to-order">
-                            <span>Добавить в заказ</span>
+<!--                        <div class="m-button-main m-button-main_blue button-add-to-order">-->
+<!--                            <span>Добавить в заказ</span>-->
+<!--                        </div>-->
+
+                        <div class="m-amount m-amount_big">
+                            <div class="m-amount__button m-amount__button_minus">
+                                <svg width="20" height="4" viewBox="0 0 20 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 1.99959C20 2.96629 19.2165 3.74997 18.2493 3.74997H1.74961C1.26654 3.74997 0.829106 3.55412 0.512286 3.2373C0.195727 2.92096 6.53031e-08 2.48344 6.53031e-08 2.00012C-0.000261194 1.03329 0.783429 0.249739 1.75052 0.25H18.2506C19.2171 0.250218 19.9997 1.03329 20 1.99959Z" fill="white"/>
+                                </svg>
+                            </div>
+
+                            <input type="text" value="1" class="m-amount__input" />
+
+                            <div class="m-amount__button m-amount__button_plus">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.9997 10.0002C19.9997 10.9669 19.2163 11.7503 18.2491 11.7503H11.7498V18.2499C11.7498 19.2169 10.9661 20.0003 9.9996 20C9.51624 20 9.07873 19.8044 8.76231 19.4878C8.44549 19.1708 8.24964 18.7335 8.24986 18.2504L8.2496 11.7501H1.74955C1.26649 11.7501 0.829329 11.5545 0.512256 11.2374C0.195966 10.9211 0.000244206 10.4836 0.000244206 10.0002C-1.70466e-05 9.03373 0.783392 8.25015 1.75046 8.25015H8.24986V1.75048C8.24986 0.783672 9.0337 0 10.0003 0C10.9666 0.000261253 11.7498 0.783149 11.7503 1.74983V8.25015H18.2503C19.2168 8.25067 19.9992 9.03373 19.9997 10.0002Z" fill="white"/>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,8 +148,10 @@
 <!-- FOOTER -->
         @@include('./component/footer/_footer.html')
 
+<!-- POPUPS -->
         @@include('./component/popups/_popup-filter.html')
         @@include('./component/popups/_popup-add-order.html')
+        @@include('./component/popups/_popup-main-menu.html')
     </div>
 
     <script src="./script/main.js"></script>

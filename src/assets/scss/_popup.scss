@@ -7,6 +7,11 @@
   right: 0;
   z-index: 2000;
 
+  &_menu {
+    height: calc(100% - 60px);
+  }
+
+
   &__header {
     position: fixed;
     top: 0;
@@ -20,6 +25,10 @@
     align-items: center;
     padding: 0 12px;
     z-index: 3000;
+
+    &_menu {
+      padding: 0 17px;
+    }
   }
 
   &__main {
@@ -45,5 +54,17 @@
     height: calc(100% - 86px);
     width: 100%;
     padding: 10px 8px;
+
+    &_menu {
+      top: 95px;
+      height: calc(100% - 95px);
+      background: $c-m-blue;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
   }
 }

@@ -1,0 +1,44 @@
+.m-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+
+  &__button {
+    flex-shrink: 0;
+    width: 115px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+      flex-shrink: 0;
+      display: block;
+    }
+
+    &_minus {
+      background: #AAAAAA;
+      border-radius: 2px;
+    }
+
+    &_plus {
+      background: #2E4D9D;
+      border-radius: 2px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100px;
+    height: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #545454;
+    background: transparent;
+    border: 0;
+  }
+}

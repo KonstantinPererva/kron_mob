@@ -1,0 +1,34 @@
+.search-empty {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    flex-shrink: 0;
+    display: block;
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #AAAAAA;
+  }
+}

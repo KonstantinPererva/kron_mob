@@ -1,5 +1,7 @@
 .m-main {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 
   &_search {
     padding-top: 51px;

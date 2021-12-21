@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="m-wrapper">
+<!-- HEADER -->
+        @@include('./component/header/_header.html')
+<!-- MAIN -->
+<!--        добавляется класс m-main_search если открывается блок с поиском
+        <main class="m-main m-main_search">
+-->
+        <main class="m-main">
+            @@include('./component/panel/_panel-back.html', {
+                "items": [
+                    {
+                        title:'Результат поиска',
+                        active: ''
+                    }
+                ]
+            })
+
+<!-- CONTAINER -->
+            <div class="m-container">
+<!-- SEARCH INFO -->
+
+                <div class="search-empty">
+                    <div class="search-empty__icon">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_133_5216)">
+                                <path d="M81.9136 54.2671V73.7527L49.9177 83.3824V16.6745L58.6626 19.3083C59.8765 16.3865 61.6461 13.7527 63.8066 11.4894L46.749 6.3659C46.6667 6.34532 46.5844 6.32475 46.5021 6.30417C46.4198 6.2836 46.3374 6.26302 46.2551 6.24244C45.7202 6.13956 45.1852 6.13956 44.6502 6.24244C44.5679 6.26302 44.4856 6.2836 44.4033 6.30417C44.321 6.32475 44.2387 6.32475 44.1564 6.3659L34.9794 9.1231L25.8848 11.8597V34.7815L15.7613 36.6951V14.8844L6.91358 17.5387L3.1893 18.6499C1.2963 19.226 0 20.9544 0 22.9297V77.0449C0 79.0202 1.2963 80.7692 3.1893 81.3248L44.1358 93.6499C44.5473 93.7733 45 93.835 45.4321 93.835C45.8642 93.835 46.2963 93.7733 46.7284 93.6499L87.6749 81.3248C89.5679 80.7486 90.8642 79.0202 90.8642 77.0449V52.621C88.107 53.6704 85.1235 54.2671 81.9959 54.2671C81.9547 54.2671 81.9342 54.2671 81.9136 54.2671Z" fill="#C4C4C4"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M63.9918 28.979C63.9918 19.0407 72.037 10.9749 81.9959 10.9749C91.9342 10.9749 100 19.0407 100 28.979C100 38.9172 91.9342 46.9831 81.9959 46.9831C72.0576 46.9831 63.9918 38.9378 63.9918 28.979ZM75.7348 36.9068L74.2798 35.4519L80.6816 29.0501L74.2798 22.6483L75.7348 21.1934L82.1365 27.5952L88.5383 21.1934L89.9933 22.6483L83.5915 29.0501L89.9933 35.4519L88.5383 36.9069L82.1365 30.5051L75.7348 36.9068Z" fill="#C4C4C4"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_133_5216">
+                                    <rect width="100" height="100" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="search-empty__text">
+                        <p>По данному штрих коду товаров не найденно</p>
+                    </div>
+                </div>
+
+<!-- MENU CATALOG -->
+
+            </div>
+        </main>
+
+<!-- FOOTER -->
+        @@include('./component/footer/_footer.html')
+
+<!-- POPUPS -->
+        @@include('./component/popups/_popup-filter.html')
+        @@include('./component/popups/_popup-add-order.html')
+        @@include('./component/popups/_popup-main-menu.html')
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
