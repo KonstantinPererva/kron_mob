@@ -1,10 +1,15 @@
 .duty {
+  color: #fff;
+  
+  &_dark {
+    color: $c-text-main;
+  }
+
   &__title {
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 18px;
-    color: #FFFFFF;
     margin-bottom: 6px;
   }
 
@@ -13,7 +18,18 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 25px;
-    color: #FFFFFF;
+  }
+
+  &_dark &__sum {
+    color: $c-m-blue;
+  }
+
+  &__wrap {
     margin-bottom: 15px;
+    padding: 0 8px;
+  }
+
+  &__button {
+    padding: 0 8px;
   }
 }
