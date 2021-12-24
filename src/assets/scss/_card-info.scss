@@ -15,5 +15,11 @@
     font-size: 14px;
     line-height: 22px;
     color: #2E4D9D;
+
+    .card-refunds & {
+      font-size: 10px;
+      line-height: 15px;
+      color: $c-text-main;
+    }
   }
 }

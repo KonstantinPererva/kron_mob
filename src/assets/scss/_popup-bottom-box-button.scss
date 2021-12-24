@@ -1,0 +1,23 @@
+.popup-bottom-box-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -7px;
+  width: 40px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__indicator {
+    &.statusOpen {
+      transform: rotateX(180deg);
+    }
+  }
+}

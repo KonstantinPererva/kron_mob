@@ -29,6 +29,13 @@
     justify-content: center;
   }
 
+  &_new-request {
+    background: $c-green;
+    color: #fff;
+    border: 1px solid $c-green;
+    justify-content: center;
+  }
+
   &__title {
     display: block;
     font-size: 16px;

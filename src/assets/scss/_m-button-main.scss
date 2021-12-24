@@ -31,10 +31,22 @@
     color: #fff;
   }
 
+  &_white {
+    background: #fff;
+    color: $c-text-main;
+    border: 1px solid $c-m-blue;
+  }
+
   &_green {
     background: $c-green;
     color: #fff;
     border: 1px solid $c-green;
+  }
+
+  &_orange {
+    background: $c-yellow;
+    color: $c-text-main;
+    border: 1px solid $c-yellow;
   }
 
   &_left-ch {

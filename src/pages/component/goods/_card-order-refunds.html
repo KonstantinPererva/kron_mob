@@ -1,0 +1,47 @@
+<div class="card-list">
+@@for (var i = 0; i < items.length; i++) {
+    <div class="card-list__item">
+        <div class="card card-refunds">
+            <div class="card__top">
+                <div class="card-title">
+                    <span class="card-title__text">`+items[i].title+`</span>
+                </div>
+
+                <div class="m-button-del">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.75 2.49999H12.5H10.625V0.62499C10.625 0.27999 10.3456 0 9.99997 0H4.99999C4.65438 0 4.375 0.27999 4.375 0.62499V2.49999H2.5H1.24999C0.904375 2.49999 0.625 2.77998 0.625 3.12498C0.625 3.46998 0.904346 3.75 1.24999 3.75H1.87498V13.125C1.87498 14.1587 2.71624 15 3.74998 15H11.25C12.2837 15 13.125 14.1587 13.125 13.125V3.75H13.75C14.0956 3.75 14.375 3.47001 14.375 3.12501C14.375 2.78001 14.0956 2.49999 13.75 2.49999ZM5.62498 1.25001H9.37498V2.50002H5.62498V1.25001ZM11.875 13.125C11.875 13.4694 11.595 13.75 11.25 13.75H3.74998C3.40498 13.75 3.12499 13.4694 3.12499 13.125V3.75H4.99999H10H11.875V13.125H11.875Z" fill="#E30613"/>
+                        <path d="M5.62499 5C5.27937 5 5 5.27999 5 5.62499V11.25C5 11.595 5.27937 11.875 5.62499 11.875C5.97061 11.875 6.24998 11.595 6.24998 11.25V5.62499C6.24998 5.27999 5.97061 5 5.62499 5Z" fill="#E30613"/>
+                        <path d="M9.37499 5C9.02938 5 8.75 5.27999 8.75 5.62499V11.25C8.75 11.595 9.02938 11.875 9.37499 11.875C9.72061 11.875 9.99998 11.595 9.99998 11.25V5.62499C9.99998 5.27999 9.72061 5 9.37499 5Z" fill="#E30613"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="card__middle">
+                <div class="card-box">
+                    <div class="card-info">
+                        <span class="card-info__property">Код</span>
+
+                        <span class="card-info__value">`+items[i].code+`</span>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="card-info__property">Каталожный номер</span>
+
+                        <span class="card-info__value">`+items[i].num+`</span>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="card-info__property">Количество</span>
+
+                        <span class="card-info__value">`+items[i].amount+`</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__bottom">
+                @@include('../select/_select.html')
+            </div>
+        </div>
+    </div>
+}
+</div>

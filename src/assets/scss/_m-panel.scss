@@ -3,6 +3,7 @@
   min-height: 36px;
   background: $c-gray-black;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 4px 8px;
 
@@ -21,5 +22,9 @@
       line-height: 18px;
       color: #fff;
     }
+  }
+
+  &__right {
+    flex-shrink: 0;
   }
 }

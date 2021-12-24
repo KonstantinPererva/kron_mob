@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="m-wrapper">
+<!-- HEADER -->
+        @@include('./component/header/_header.html')
+<!-- MAIN -->
+        <main class="m-main">
+            @@include('./component/panel/_panel.html', {
+                "title":"Возвраты",
+                "item": ""
+            })
+<!-- CONTAINER -->
+            <div class="m-container">
+<!-- ORDERS -->
+                @@include('./component/goods/_card-order-refunds.html', {
+                "items": [
+                {
+                title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                code: '031289',
+                num: 'BM-ZA1102',
+                amount: '125'
+                },
+                {
+                title:'Ароматизаторы воздуха',
+                code: '032549',
+                num: 'BM-ZA1162',
+                amount: '456126'
+                },
+                {
+                title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                code: '031289',
+                num: 'BM-ZA1102',
+                amount: '2654'
+                },
+                {
+                title:'Ароматизаторы воздуха',
+                code: '032549',
+                num: 'BM-ZA1162',
+                amount: '15783'
+                }
+                ]})
+            </div>
+        </main>
+
+        @@include('./component/footer/_footer.html')
+
+<!-- POPUPS -->
+        @@include('./component/popups/_popup-main-menu.html')
+        @@include('./component/popups/_popup-add-order.html')
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>

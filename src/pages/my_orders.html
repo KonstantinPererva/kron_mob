@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="m-wrapper">
+<!-- HEADER -->
+        @@include('./component/header/_header.html')
+<!-- MAIN -->
+        <main class="m-main">
+            @@include('./component/panel/_panel.html', {
+                "title":"Мои заказы",
+                "item":'<div class="button-sm button-sm_red"><div class="button-sm__icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.34783 1.94781H8.61992C8.71594 1.79586 8.7793 1.62529 8.79736 1.4449C8.85508 0.868399 8.55147 0.351603 8.03457 0.122482C7.55945 -0.0881239 7.02553 -0.00203011 6.64105 0.346681L5.72191 1.17969C5.54291 0.983907 5.28559 0.860861 5 0.860861C4.71391 0.860861 4.45617 0.984298 4.27713 1.18068L3.35682 0.346583C2.97172 -0.00212775 2.43801 -0.0878895 1.96311 0.122599C1.44635 0.351739 1.14268 0.868712 1.20057 1.4452C1.21867 1.62545 1.28199 1.79594 1.37799 1.94781H0.652168C0.291973 1.94781 0 2.23981 0 2.59998V3.57824C0 3.75832 0.145996 3.90434 0.326094 3.90434H9.67393C9.854 3.90434 10 3.75834 10 3.57824V2.59998C10 2.23981 9.70803 1.94781 9.34783 1.94781ZM4.02174 1.83912V1.94781H2.4877C2.08238 1.94781 1.7634 1.56996 1.86463 1.14797C1.90922 0.96213 2.04336 0.803712 2.21686 0.723517C2.4551 0.6134 2.719 0.648751 2.9191 0.829864L4.02201 1.82951C4.02195 1.83274 4.02174 1.8359 4.02174 1.83912ZM8.15027 1.35832C8.12598 1.69725 7.81982 1.94785 7.48004 1.94785H5.97826V1.83916C5.97826 1.83531 5.97803 1.8315 5.97799 1.82766C6.22783 1.60117 6.76984 1.10992 7.06381 0.843458C7.23088 0.692032 7.46465 0.621349 7.68074 0.685802C7.99084 0.778302 8.17295 1.04201 8.15027 1.35832Z" fill="white"/><path d="M0.652344 4.5564V9.339C0.652344 9.6992 0.944316 9.99117 1.30451 9.99117H4.34799V4.5564H0.652344Z" fill="white"/><path d="M5.65234 4.5564V9.99117H8.69582C9.05602 9.99117 9.34799 9.6992 9.34799 9.339V4.5564H5.65234Z" fill="white"/></svg></div><div class="button-sm__text">Акции</div></div>'
+            })
+<!-- CONTAINER -->
+            <div class="m-container">
+<!-- ORDERS -->
+                <div class="orders-box">
+                    <div class="orders-list">
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_new"><span>Новый</span></div>
+
+                                <div class="order-line__title action"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">12 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_taken"><span>Принят</span></div>
+
+                                <div class="order-line__title"><span>3BB9I</span></div>
+
+                                <div class="order-line__sum">182 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_new"><span>Новый</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">1 562 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_taken"><span>Принят</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">145 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_new"><span>Новый</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">12 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_taken"><span>Принят</span></div>
+
+                                <div class="order-line__title"><span>3BB9I</span></div>
+
+                                <div class="order-line__sum">182 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_new"><span>Новый</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">1 562 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_taken"><span>Принят</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">145 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_new"><span>Новый</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">12 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_taken"><span>Принят</span></div>
+
+                                <div class="order-line__title"><span>3BB9I</span></div>
+
+                                <div class="order-line__sum">182 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_new"><span>Новый</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">1 562 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_taken"><span>Принят</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">145 грн</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-new">
+                        <div class="order-box order-box_new"><span class="order-box__title">+ Новый заказ</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @@include('./component/footer/_footer.html')
+
+<!-- POPUPS -->
+        @@include('./component/popups/_popup-main-menu.html')
+        @@include('./component/popups/_popup-add-order.html')
+    </div>
+</body>
+</html>

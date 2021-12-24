@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="m-wrapper">
+<!-- HEADER -->
+        @@include('./component/header/_header.html')
+<!-- MAIN -->
+        <main class="m-main">
+            @@include('./component/panel/_panel.html', {
+                "title":"Возвраты",
+                "item": ""
+            })
+<!-- CONTAINER -->
+            <div class="m-container">
+<!-- ORDERS -->
+                <div class="orders-box">
+                    <div class="orders-list">
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_submitted"><span>Отправлен</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">12 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_submitted"><span>Отправлен</span></div>
+
+                                <div class="order-line__title"><span>3BB9I</span></div>
+
+                                <div class="order-line__sum">182 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_draft"><span>Черновик</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">1 562 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_submitted"><span>Отправлен</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">145 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_draft"><span>Черновик</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">12 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_submitted"><span>Отправлен</span></div>
+
+                                <div class="order-line__title"><span>3BB9I</span></div>
+
+                                <div class="order-line__sum">182 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_draft"><span>Черновик</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">1 562 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_submitted"><span>Отправлен</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">145 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_draft"><span>Черновик</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">12 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_submitted"><span>Отправлен</span></div>
+
+                                <div class="order-line__title"><span>3BB9I</span></div>
+
+                                <div class="order-line__sum">182 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_draft"><span>Черновик</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">1 562 506 грн</div>
+                            </div>
+                        </div>
+
+                        <div class="orders-list__item">
+                            <div class="order-line">
+                                <div class="order-line__status order-line__status_submitted"><span>Отправлен</span></div>
+
+                                <div class="order-line__title"><span>3MB8I</span></div>
+
+                                <div class="order-line__sum">145 грн</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-new">
+                        <div class="order-box order-box_new-request"><span class="order-box__title">+ Новая заявка</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @@include('./component/footer/_footer.html')
+
+<!-- POPUPS -->
+        @@include('./component/popups/_popup-main-menu.html')
+        @@include('./component/popups/_popup-add-order.html')
+    </div>
+</body>
+</html>

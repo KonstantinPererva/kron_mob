@@ -8,7 +8,8 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     tinypng = require('gulp-tinypng'),
     browserSync = require('browser-sync').create(),
-    fileinclude = require('gulp-file-include');
+    fileinclude = require('gulp-file-include'),
+    concat = require('gulp-concat');
 
 gulp.task('img', function (done) {
     gulp.src('src/assets/img/**/*.{png,jpg,jpeg}')
@@ -42,7 +43,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task("script", function () {
-    return gulp.src("src/assets/script/**/*.js")
+    return gulp.src(["src/assets/script/**/*.js","src/pages/component/**/*.js"])
+        .pipe(concat('main.js'))
         .pipe(babel())
         .pipe(uglify())
         .pipe(gulp.dest("build/script"));
@@ -78,8 +80,8 @@ gulp.task('serve', function () {
 
 gulp.task('watch', function () {
     gulp.watch('src/pages/**/*.html', gulp.series('includeHTML'));
-    gulp.watch('src/assets/scss/**/*.scss', gulp.series('sass'));
-    gulp.watch('src/assets/script/**/*.js', gulp.series('script'));
+    gulp.watch(['src/assets/scss/**/*.scss','src/pages/component/**/*.scss'], gulp.series('sass'));
+    gulp.watch(["src/assets/script/**/*.js","src/pages/component/**/*.js"], gulp.series('script'));
     gulp.watch('src/assets/img/**/*.{png,jpg,jpeg}', gulp.series('img'));
 });
 

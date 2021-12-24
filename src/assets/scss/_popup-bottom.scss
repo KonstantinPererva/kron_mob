@@ -1,0 +1,25 @@
+.popup-bottom {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #aaa;
+  z-index: 2000;
+
+  &__body {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__substrate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    background: rgba(0,0,0,.5);
+    z-index: 0;
+    opacity: 0;
+    display: none;
+  }
+}

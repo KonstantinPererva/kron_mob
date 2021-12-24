@@ -15,4 +15,14 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  & .m-button-del {
+    margin-top: -5px;
+  }
+
+  &__middle {
+    .card-refunds & {
+      margin-bottom: 10px;
+    }
+  }
 }
