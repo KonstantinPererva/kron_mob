@@ -1,0 +1,47 @@
+<div class="card-list">
+@@for (var i = 0; i < items.length; i++) {
+    <div class="card-list__item">
+        <div class="card card-mutual">
+            <div class="card__top">
+                <div class="card-title">
+                    <span class="card-title__text">`+items[i].title+`</span>
+                </div>
+            </div>
+
+            <div class="card__middle">
+                <div class="card-box">
+                    <div class="card-info">
+                        <div class="__date"><span>2021-06-17</span></div>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-info">
+                        <span class="card-info__property">Нач. остаток</span>
+
+                        <span class="card-info__value">`+items[i].remainderBegin+`</span>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="card-info__property">Приход</span>
+
+                        <span class="card-info__value">`+items[i].receipt+`</span>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="card-info__property">Расход</span>
+
+                        <span class="card-info__value">`+items[i].consumption+`</span>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="card-info__property">Кон. остаток</span>
+
+                        <span class="card-info__value">`+items[i].remainderEnd+`</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+</div>

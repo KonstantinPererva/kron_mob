@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="m-wrapper">
+<!-- HEADER -->
+        @@include('./component/header/_header.html')
+<!-- MAIN -->
+<!--        добавляется класс m-main_search если открывается блок с поиском
+        <main class="m-main m-main_search">
+-->
+        <main class="m-main">
+            @@include('./component/panel/_panel-breadcrumbs.html', {
+                "items": [
+                    {
+                    title:'Акции',
+                    active: ''
+                    },
+                    {
+                    title:'Возьми на сумму - получи бонусы',
+                    active: 'active'
+                    }
+                ],
+                "button":'close',
+                "color":'-green'
+            })
+
+<!-- CONTAINER -->
+            <div class="m-container">
+                <div class="box-wrapper">
+                    <div class="__inner">
+<!-- CATALOG -->
+                        @@include('./component/card/_card.html', {
+                        "items": [
+                            {
+                                title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                                manufacturer: 'Doctor Marcus, Польша',
+                                code: '031289',
+                                package: '100',
+                                remainder: '3',
+                                num: 'BM-ZA1102',
+                                price: '12 155.15 грн',
+                                text: "+ Добавить"
+                            },
+                            {
+                                title:'Ароматизаторы воздуха',
+                                manufacturer: 'Doctor Marcus, Польша',
+                                code: '032549',
+                                package: '150',
+                                remainder: '102',
+                                num: 'BM-ZA1162',
+                                price: '11 195.64 грн',
+                                added: "-green",
+                                text: "Добавлено"
+                            },
+                            {
+                                title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                                manufacturer: 'Doctor Marcus, Польша',
+                                code: '031289',
+                                package: '100',
+                                remainder: '3',
+                                num: 'BM-ZA1102',
+                                price: '12 155.15 грн',
+                                added: "-green",
+                                text: "Добавлено"
+                            },
+                            {
+                                title:'Ароматизаторы воздуха',
+                                manufacturer: 'Doctor Marcus, Польша',
+                                code: '032549',
+                                package: '150',
+                                remainder: '102',
+                                num: 'BM-ZA1162',
+                                price: '11 195.64 грн',
+                                text: "+ Добавить"
+                            }
+                        ]})
+                    </div>
+                </div>
+            </div>
+        </main>
+
+<!-- FOOTER -->
+        @@include('./component/footer/_footer.html')
+
+<!-- POPUPS -->
+        @@include('./component/popups/_popup-filter.html')
+        @@include('./component/popups/_popup-add-order.html')
+        @@include('./component/popups/_popup-main-menu.html')
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>

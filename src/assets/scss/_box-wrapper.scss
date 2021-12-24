@@ -1,0 +1,20 @@
+.box-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 10px 8px 0 8px;
+
+  & .__inner {
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: -8px;
+    padding-right: 8px;
+  }
+
+  & .__innerCalc {
+    max-height: calc(100% - 60px);
+  }
+}

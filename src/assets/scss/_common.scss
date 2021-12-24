@@ -1,0 +1,95 @@
+.-flex {
+  display: flex;
+}
+
+.-double {
+  justify-content: space-between;
+
+  & > * {
+    width: calc(50% - 2px);
+  }
+}
+
+.-triple {
+  justify-content: space-between;
+
+  & > * {
+    width: calc(33.33% - 2px);
+  }
+}
+
+.-fz-10 {
+  font-size: 10px;
+}
+
+.-fz-12 {
+  font-size: 12px;
+}
+
+.-fz-14 {
+  font-size: 14px;
+}
+
+.-fz-16 {
+  font-size: 16px;
+}
+
+.-blue {
+  border: 1px solid $c-m-blue;
+  background: $c-m-blue;
+  color: #fff;
+}
+
+.-white {
+  border: 1px solid $c-m-blue;
+  background: #fff;
+  color: $c-text-main;
+}
+
+.-green {
+  border: 1px solid $c-green;
+  background: $c-green;
+  color: #fff;
+}
+
+.-orange {
+  border: 1px solid $c-yellow;
+  background: $c-yellow;
+  color: $c-text-main;
+}
+
+.-left-content {
+  justify-content: flex-start;
+}
+
+.-right-content {
+  justify-content: flex-end;
+}
+
+.-x-center-content {
+  justify-content: center;
+}
+
+.-top-content {
+  align-items: flex-start;
+}
+
+.-bottom-content {
+  align-items: flex-end;
+}
+
+.-y-center-content {
+  align-items: center;
+}
+
+.-br-2 {
+  border-radius: 2px;
+}
+
+.-br-5 {
+  border-radius: 5px;
+}
+
+.-br-10 {
+  border-radius: 10px;
+}

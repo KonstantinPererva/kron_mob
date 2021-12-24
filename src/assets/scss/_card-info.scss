@@ -21,5 +21,19 @@
       line-height: 15px;
       color: $c-text-main;
     }
+
+    .card-mutual & {
+      font-size: 11px;
+      line-height: 17px;
+      color: $c-text-main;
+    }
+  }
+
+  & .__date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    color: #AAAAAA;
   }
 }

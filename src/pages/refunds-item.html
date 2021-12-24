@@ -20,34 +20,48 @@
             })
 <!-- CONTAINER -->
             <div class="m-container">
+                <div class="box-wrapper">
+                    <div class="__innerCalc">
 <!-- ORDERS -->
-                @@include('./component/goods/_card-order-refunds.html', {
-                "items": [
-                {
-                title:'Автомобильный освежитель воздуха AIR SURF Black ',
-                code: '031289',
-                num: 'BM-ZA1102',
-                amount: '125'
-                },
-                {
-                title:'Ароматизаторы воздуха',
-                code: '032549',
-                num: 'BM-ZA1162',
-                amount: '456126'
-                },
-                {
-                title:'Автомобильный освежитель воздуха AIR SURF Black ',
-                code: '031289',
-                num: 'BM-ZA1102',
-                amount: '2654'
-                },
-                {
-                title:'Ароматизаторы воздуха',
-                code: '032549',
-                num: 'BM-ZA1162',
-                amount: '15783'
-                }
-                ]})
+                        @@include('./component/card/_card-order-refunds.html', {
+                        "items": [
+                        {
+                        title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                        code: '031289',
+                        num: 'BM-ZA1102',
+                        amount: '125'
+                        },
+                        {
+                        title:'Ароматизаторы воздуха',
+                        code: '032549',
+                        num: 'BM-ZA1162',
+                        amount: '456126'
+                        },
+                        {
+                        title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                        code: '031289',
+                        num: 'BM-ZA1102',
+                        amount: '2654'
+                        },
+                        {
+                        title:'Ароматизаторы воздуха',
+                        code: '032549',
+                        num: 'BM-ZA1162',
+                        amount: '15783'
+                        }
+                        ]})
+                    </div>
+
+                    <div class="box-buttons -flex -double">
+                        <div class="__wrapper">
+                            <div class="m-button-main -blue -fz-16 -br-2"><span>Сохр. в черновик</span></div>
+                        </div>
+
+                        <div class="__wrapper">
+                            <div class="m-button-main -orange -fz-16 -br-2"><span>Отправить</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
