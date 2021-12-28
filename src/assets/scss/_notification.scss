@@ -1,0 +1,41 @@
+.notification {
+  padding-bottom: 40px;
+
+  .-img {
+    display: block;
+    margin-bottom: 17px;
+
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .-date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    color: #AAAAAA;
+    margin-bottom: 8px;
+  }
+
+  .-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: $c-text-main;
+    margin-bottom: 8px;
+  }
+
+  .-discr {
+    & p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: $c-text-main;
+    }
+  }
+}
