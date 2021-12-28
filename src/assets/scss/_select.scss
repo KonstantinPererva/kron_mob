@@ -1,5 +1,11 @@
 .select {
+  position: relative;
+  z-index: 0;
   width: 100%;
+
+  & + & {
+    margin-top: 15px;
+  }
   
   &__title {
     font-style: normal;
@@ -27,7 +33,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
-    color: #545454;
+    color: $c-text-main;
     z-index: 1;
 
     & .indicator {
@@ -67,5 +73,19 @@
     font-size: 14px;
     line-height: 22px;
     color: #545454;
+  }
+
+  &.-blue__ &__text {
+    height: 40px;
+    padding: 0 40px 0 14px;
+    border: 1px solid $c-m-blue;
+  }
+
+  &.-blue__ &__title {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 8px;
+    margin-bottom: 6px;
+    color: $c-text-main;
   }
 }

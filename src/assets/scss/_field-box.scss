@@ -1,4 +1,7 @@
 .field-box {
+  & + & {
+    margin-top: 15px;
+  }
 
   &__title {
     font-style: normal;

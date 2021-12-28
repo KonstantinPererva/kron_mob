@@ -16,5 +16,9 @@
 
   & .__innerCalc {
     max-height: calc(100% - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: -8px;
+    padding-right: 8px;
   }
 }

@@ -10,7 +10,8 @@ function ToggleBoxSlide(selector, opt = {}) {
         btnIndicatorToggle: '[data-indicator="button"]',
         isOpen: false,
         transitionOpen: undefined,
-        transitionClose: undefined
+        transitionClose: undefined,
+        initialBtn: true
     }
 
     self.option = Object.assign(self.defaultOption,opt);
@@ -36,11 +37,15 @@ function ToggleBoxSlide(selector, opt = {}) {
 
     self.nodeHeight = null;
 
-    const isOpen = function () {
+    self.setHeightBox =  null;
+    self.setStatusBox =  null;
+    self.setCloseBox =  null;
+
+    self.isOpen = function () {
         return self.option.isOpen;
     }
 
-    const init = function() {
+    self.init = function() {
         if (self.buttonToggle) {
             self.indicatorToggle = self.buttonToggle.querySelector(self.option.btnIndicatorToggle);
             self.indicatorToggle.style.transition = self.option.transition + "ms";
@@ -67,14 +72,16 @@ function ToggleBoxSlide(selector, opt = {}) {
         return self.nodeHeight;
     }
 
-    const openBox = function () {
+    self.openBox = function () {
+        clearTimeout(self.setCloseBox);
+
         self.node.style.display = "block";
 
-        let setHeightBox = setTimeout(() => {
+        self.setHeightBox = setTimeout(() => {
             self.node.style.height = self.nodeHeight + "px";
-        }, 0);
+        }, 10);
 
-        let setStatusBox = setTimeout(() => {
+        self.setStatusBox = setTimeout(() => {
             self.option.isOpen = true;
         }, self.option.transition);
 
@@ -91,10 +98,13 @@ function ToggleBoxSlide(selector, opt = {}) {
         }
     }
 
-    const closeBox = function () {
+    self.closeBox = function () {
         self.node.style.height = "0";
 
-        setTimeout(() => {
+        clearTimeout(self.setHeightBox);
+        clearTimeout(self.setStatusBox);
+
+        self.setCloseBox = setTimeout(() => {
             self.node.style.display = "none";
             self.option.isOpen = false;
         }, self.option.transition);
@@ -112,7 +122,7 @@ function ToggleBoxSlide(selector, opt = {}) {
         }
     }
 
-    const indicatorStatusOpen = function () {
+    self.indicatorStatusOpen = function () {
         if (self.indicatorToggle) {
             self.indicatorToggle.classList.add('statusOpen');
         }
@@ -126,7 +136,7 @@ function ToggleBoxSlide(selector, opt = {}) {
         }
     }
 
-    const indicatorStatusClose = function () {
+    self.indicatorStatusClose = function () {
         if (self.indicatorToggle) {
             self.indicatorToggle.classList.remove('statusOpen');
         }
@@ -140,7 +150,7 @@ function ToggleBoxSlide(selector, opt = {}) {
         }
     }
 
-    if (self.buttonToggle) {
+    if (self.buttonToggle && self.option.initialBtn) {
         self.buttonToggle.addEventListener('click', () => {
             if (self.option.isOpen === false) {
                 openBox();
@@ -152,31 +162,31 @@ function ToggleBoxSlide(selector, opt = {}) {
         });
     }
 
-    if (self.buttonOpen) {
+    if (self.buttonOpen && self.option.initialBtn) {
         self.buttonOpen.addEventListener('click', () => {
             openBox();
             indicatorStatusOpen();
         });
     }
 
-    if (self.buttonClose) {
+    if (self.buttonClose && self.option.initialBtn) {
         self.buttonClose.addEventListener ('click', () => {
             closeBox();
             indicatorStatusClose();
         });
     }
 
-    init();
+    self.init();
 
     return {
-        isOpen,
+        isOpen: self.isOpen,
         open: () => {
-            openBox();
-            indicatorStatusOpen();
+            self.openBox();
+            self.indicatorStatusOpen();
         },
         close: () => {
-            closeBox();
-            indicatorStatusClose();
+            self.closeBox();
+            self.indicatorStatusClose();
         },
     }
 }
@@ -203,20 +213,47 @@ if (orderInfoSubstrate && document.querySelector('.order-info')) {
 
 // orderInfo.open();
 
-const selectList = document.querySelectorAll('.select__dropdown');
+const selectList = document.querySelectorAll('.select');
 
 if (selectList.length) {
     for (let i = 0; i < selectList.length; i++) {
-        let btn = selectList[i].previousElementSibling;
+        selectList[i].btn = selectList[i].querySelector('.select__text');
+        selectList[i].box = selectList[i].querySelector('.select__dropdown');
 
-        selectList[i].select = new ToggleBoxSlide(selectList[i], {
+        selectList[i].select = new ToggleBoxSlide(selectList[i].box, {
             transition: transitionAnimation,
-            btnToggle: btn,
+            btnToggle: selectList[i].btn,
+            transitionOpen: () => {
+                selectList[i].style.zIndex = "1";
+            },
+            transitionClose: () => {
+                setTimeout(() => {selectList[i].style.zIndex = "0";}, transitionAnimation);
+            },
+            initialBtn: false
+        })
+    }
+
+    for(let i = 0; i < selectList.length; i++) {
+        selectList[i].btn.addEventListener('click', (e) => {
+            let active = false;
+
+            if (selectList[i].select.isOpen()) {
+                selectList[i].select.close();
+            } else {
+                for(let k = 0; k < selectList.length; k++) {
+                    if (selectList[k].select.isOpen()) {
+                        selectList[k].select.close();
+                        active = true;
+                    }
+                }
+
+                if (active) {
+                    setTimeout(() => {selectList[i].select.open();}, transitionAnimation);
+                } else {
+                    selectList[i].select.open();
+                }
+
+            }
         })
     }
 }
-
-
-console.log("252525")
-console.log("3333333333")
-

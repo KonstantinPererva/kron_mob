@@ -39,7 +39,11 @@
             </div>
 
             <div class="card__bottom">
-                @@include('../select/_select.html')
+                @@include('../select/_select.html', {
+                    "title": 'Каталожный номер',
+                    "option": ['Приехал не тот товар','Приехал не тот товар','Приехал не тот товар'],
+                    "text": 'Приехал не тот товар'
+                })
             </div>
         </div>
     </div>
