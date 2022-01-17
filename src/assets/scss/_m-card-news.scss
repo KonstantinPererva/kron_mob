@@ -1,0 +1,86 @@
+.m-card-news {
+  padding: 12px 12px 15px 12px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  &.-strong__ {
+    border-color: #EAEAEF;
+  }
+
+  & .__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 5px;
+    padding: 0 24px 0 2px;
+
+    &:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.42042 6.00003C7.42042 6.2151 7.3383 6.43013 7.17441 6.5941L2.01463 11.7538C1.6864 12.0821 1.15424 12.0821 0.826148 11.7538C0.498055 11.4257 0.498055 10.8937 0.826148 10.5654L5.39181 6.00003L0.826307 1.43461C0.498214 1.10639 0.498214 0.574383 0.826307 0.246316C1.1544 -0.0820704 1.68656 -0.0820704 2.01479 0.246316L7.17457 5.40596C7.33848 5.57001 7.42042 5.78505 7.42042 6.00003Z' fill='%23545454'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+
+  &.-strong__  .__title {
+    padding-left: 12px;
+
+    &:before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $c-m-blue;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
+  & .__title-text {
+    width: calc(100% - 60px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: $c-text-main;
+    margin-right: 11px;
+  }
+
+  & .__date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    color: #AAAAAA;
+  }
+
+  & .__descr-text {
+    width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    color: #AAAAAA;
+  }
+}

@@ -1,0 +1,55 @@
+.m-bonus-payment {
+
+  &__label {
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+
+  &__input {
+    position: absolute;
+    left: -9999px;
+    display: none;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border: 0;
+    visibility: hidden;
+    overflow: hidden;
+    outline: none;
+    background: transparent;
+
+    &:checked + span:before {
+      content: "\2713";
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: $c-text-main;
+    padding: 0 0 0 28px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+      border-radius: 2px;
+      border: 1px solid $c-gray-black;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      background: #fff;
+    }
+  }
+}

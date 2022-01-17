@@ -1,0 +1,51 @@
+.m-action-gift-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 8px 10px;
+
+  & .__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    margin-bottom: 20px;
+
+    & .__icon {
+      margin-right: 10px;
+    }
+
+    & .__text {
+      flex-grow: 1;
+      font-size: 14px;
+      line-height: 22px;
+      color: $c-text-main;
+    }
+
+    & .__indicator {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 2px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  & .__scale {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 25px;
+  }
+
+  & .bottom {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+}

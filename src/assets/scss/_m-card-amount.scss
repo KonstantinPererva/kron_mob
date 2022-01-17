@@ -1,0 +1,43 @@
+.m-card-amount {
+  width: 160px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border: 1px solid $c-gray-black;
+  border-radius: 2px;
+
+  &__button {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+  }
+
+  &__field {
+    width: 60px;
+    height: 100%;
+  }
+
+  &__input {
+    display: block;
+    width: 58px;
+    height: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 33px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    color: $c-text-main;
+    padding: 0;
+
+    &:focus, &:active {
+      outline: none;
+    }
+  }
+}

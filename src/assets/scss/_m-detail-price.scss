@@ -1,0 +1,25 @@
+.m-detail-price {
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 13px;
+    color: $c-text-main;
+    padding: 8px;
+    min-height: 48px;
+
+    &_dark {
+      color: #FFFFFF;
+      background: $c-gray-black;
+    }
+
+    & span:last-child {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}

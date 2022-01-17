@@ -15,12 +15,11 @@
 <!-- MAIN -->
         <main class="m-main">
             @@include('./component/panel/_panel.html', {
-                "title":"Возвраты",
-                "item": ""
+                "title":"Возвраты"
             })
 <!-- CONTAINER -->
             <div class="m-container">
-                <div class="box-wrapper">
+                <div class="m-box-wrapper">
                     <div class="__innerCalc">
 <!-- ORDERS -->
                         @@include('./component/card/_card-order-refunds.html', {
@@ -52,7 +51,7 @@
                         ]})
                     </div>
 
-                    <div class="box-buttons -flex -double">
+                    <div class="m-box-buttons -flex -double">
                         <div class="__wrapper">
                             <div class="m-button-main -blue -fz-16 -br-2"><span>Сохр. в черновик</span></div>
                         </div>

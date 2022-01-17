@@ -1,0 +1,21 @@
+.m-popup-small-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  padding: 10px 14px;
+  background: $c-m-blue;
+  border-radius: 5px 5px 0 0;
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+
+  &__close {
+
+  }
+}

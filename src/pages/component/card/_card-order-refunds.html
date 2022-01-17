@@ -1,10 +1,10 @@
-<div class="card-list">
+<div class="m-card-list">
 @@for (var i = 0; i < items.length; i++) {
-    <div class="card-list__item">
-        <div class="card card-refunds">
-            <div class="card__top">
-                <div class="card-title">
-                    <span class="card-title__text">`+items[i].title+`</span>
+    <div class="m-card-list__item">
+        <div class="m-card m-card-refunds">
+            <div class="m-card__top">
+                <div class="m-card-title">
+                    <span class="m-card-title__text">`+items[i].title+`</span>
                 </div>
 
                 <div class="m-button-del">
@@ -16,29 +16,29 @@
                 </div>
             </div>
 
-            <div class="card__middle">
-                <div class="card-box">
-                    <div class="card-info">
-                        <span class="card-info__property">Код</span>
+            <div class="m-card__middle">
+                <div class="m-card-box">
+                    <div class="m-card-info">
+                        <span class="m-card-info__property">Код</span>
 
-                        <span class="card-info__value">`+items[i].code+`</span>
+                        <span class="m-card-info__value">`+items[i].code+`</span>
                     </div>
 
-                    <div class="card-info">
-                        <span class="card-info__property">Каталожный номер</span>
+                    <div class="m-card-info">
+                        <span class="m-card-info__property">Каталожный номер</span>
 
-                        <span class="card-info__value">`+items[i].num+`</span>
+                        <span class="m-card-info__value">`+items[i].num+`</span>
                     </div>
 
-                    <div class="card-info">
-                        <span class="card-info__property">Количество</span>
+                    <div class="m-card-info">
+                        <span class="m-card-info__property">Количество</span>
 
-                        <span class="card-info__value">`+items[i].amount+`</span>
+                        <span class="m-card-info__value">`+items[i].amount+`</span>
                     </div>
                 </div>
             </div>
 
-            <div class="card__bottom">
+            <div class="m-card__bottom">
                 @@include('../select/_select.html', {
                     "title": 'Каталожный номер',
                     "option": ['Приехал не тот товар','Приехал не тот товар','Приехал не тот товар'],

@@ -1,0 +1,40 @@
+.m-address-box {
+  & + & {
+    margin-top: 24px;
+  }
+
+  & &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: $c-text-main;
+    margin-bottom: 6px;
+  }
+
+  & &__block {
+    display: flex;
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+
+  & &__icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+  }
+
+  & .text + .text {
+    margin-top: 10px;
+  }
+
+  & .text, & .link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    color: $c-m-blue;
+  }
+}

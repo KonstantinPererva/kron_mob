@@ -18,16 +18,15 @@
 -->
         <main class="m-main">
             @@include('./component/panel/_panel.html', {
-            "title":"Уведомления",
-            "item":""
+            "title":"Уведомления"
             })
 
 
 <!-- CONTAINER -->
             <div class="m-container">
-                <div class="box-wrapper">
+                <div class="m-box-wrapper">
                     <div class="__inner">
-                        <div class="news-list">
+                        <div class="m-news-list">
                             <!-- CATALOG -->
                             @@loop('./component/card/_card-news.html', [
                                 {
@@ -64,7 +63,7 @@
                                     title:'Новые возможности - оплата возможности возможности возможности возможности',
                                     date: '13.09.2021',
                                     descr: 'Теперь вам доступна оплата свободной сумм вам доступна оплата свободной сумм',
-                                    viewed: '-strong__'
+                                    viewed: ''
                                 },
                                 {
                                     title:'АКЦИЯ',
@@ -76,7 +75,7 @@
                                     title:'Новые возможности - оплата возможности возможности возможности возможности',
                                     date: '13.09.2021',
                                     descr: 'Теперь вам доступна оплата свободной сумм вам доступна оплата свободной сумм',
-                                    viewed: '-strong__'
+                                    viewed: ''
                                 },
                                 {
                                     title:'АКЦИЯ',

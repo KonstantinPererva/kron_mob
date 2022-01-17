@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="m-wrapper">
+<!-- HEADER -->
+        @@include('./component/header/_header.html')
+<!-- MAIN -->
+<!--        добавляется класс "m-main_search" если открывается блок с поиском
+        <main class="m-main m-main_search">
+-->
+        <main class="m-main">
+            @@include('./component/panel/_panel.html', {
+            "title":"Уведомления",
+            "button":"close"
+            })
+
+
+<!-- CONTAINER -->
+            <div class="m-container">
+                <div class="m-box-wrapper">
+                    <div class="__inner">
+                        <div class="m-action-list">
+                            <!-- ACTION LIST -->
+                            <div class="m-action-gift-card __item">
+                                <div class="__title">
+                                    <div class="__icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#E30613"/>
+                                            <path d="M6.59986 14L12.6024 6H13.3952L7.3978 14H6.59986ZM8.15971 10C7.66207 10 7.26739 9.8284 6.97567 9.4852C6.68395 9.142 6.53809 8.67868 6.53809 8.09524C6.53809 7.50837 6.68395 7.04505 6.97567 6.70528C7.26739 6.36208 7.66207 6.19048 8.15971 6.19048C8.65392 6.19048 9.04688 6.36208 9.3386 6.70528C9.63032 7.04505 9.77618 7.50837 9.77618 8.09524C9.77618 8.67868 9.63032 9.142 9.3386 9.4852C9.04688 9.8284 8.65392 10 8.15971 10ZM8.15971 9.49035C8.42054 9.49035 8.62818 9.36508 8.78262 9.11454C8.93706 8.86057 9.01428 8.52081 9.01428 8.09524C9.01428 7.66624 8.93706 7.32647 8.78262 7.07593C8.62818 6.82196 8.42054 6.69498 8.15971 6.69498C7.89544 6.69498 7.68609 6.82196 7.53165 7.07593C7.37721 7.32647 7.29999 7.66624 7.29999 8.09524C7.29999 8.52081 7.37721 8.86057 7.53165 9.11454C7.68609 9.36508 7.89544 9.49035 8.15971 9.49035ZM11.8405 13.8095C11.3429 13.8095 10.9482 13.6379 10.6565 13.2947C10.3682 12.9515 10.2241 12.4882 10.2241 11.9048C10.2241 11.3213 10.3682 10.858 10.6565 10.5148C10.9482 10.1716 11.3429 10 11.8405 10C12.3382 10 12.7329 10.1716 13.0246 10.5148C13.3163 10.858 13.4622 11.3213 13.4622 11.9048C13.4622 12.4882 13.3163 12.9515 13.0246 13.2947C12.7329 13.6379 12.3382 13.8095 11.8405 13.8095ZM11.8405 13.2999C12.1048 13.2999 12.3141 13.1746 12.4686 12.9241C12.623 12.6735 12.7002 12.3338 12.7002 11.9048C12.7002 11.4758 12.623 11.136 12.4686 10.8855C12.3141 10.6315 12.1048 10.5045 11.8405 10.5045C11.5797 10.5045 11.3721 10.6315 11.2176 10.8855C11.0632 11.136 10.986 11.4758 10.986 11.9048C10.986 12.3338 11.0632 12.6735 11.2176 12.9241C11.3721 13.1746 11.5797 13.2999 11.8405 13.2999Z" fill="white"/>
+                                        </svg>
+                                    </div>
+
+                                    <div class="__text">
+                                        <span>Возьми на сумму - получи бонусы</span>
+                                    </div>
+
+                                    <div class="__indicator">
+                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.00003 0.579829C6.2151 0.579829 6.43013 0.661945 6.5941 0.825832L11.7538 5.98561C12.0821 6.31384 12.0821 6.846 11.7538 7.1741C11.4257 7.50219 10.8937 7.50219 10.5654 7.1741L6.00003 2.60844L1.43461 7.17394C1.10639 7.50203 0.574383 7.50203 0.246316 7.17394C-0.0820704 6.84584 -0.0820704 6.31368 0.246316 5.98545L5.40596 0.825673C5.57001 0.661759 5.78505 0.579829 6.00003 0.579829Z" fill="#2E4D9D"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="m-scale __scale">
+                                    <div class="__list">
+                                        <div class="__box">
+                                            <div class="__num">5 000</div>
+
+                                            <div class="__indicator"></div>
+
+                                            <div class="__val">1%</div>
+                                        </div>
+
+                                        <div class="__box">
+                                            <div class="__num">7 000</div>
+
+                                            <div class="__indicator"></div>
+
+                                            <div class="__val">1,5%</div>
+                                        </div>
+
+                                        <div class="__box">
+                                            <div class="__num">10 000</div>
+
+                                            <div class="__indicator"></div>
+
+                                            <div class="__val">2%</div>
+                                        </div>
+
+                                        <div class="__field">
+                                            <div class="__track">
+                                                <div class="__thumb"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="__bottom">
+                                    <div class="__prop">Мой чек</div>
+
+                                    <div class="__val">6 432 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+<!-- FOOTER -->
+        @@include('./component/footer/_footer.html')
+
+<!-- POPUPS -->
+        @@include('./component/popups/_popup-filter.html')
+        @@include('./component/popups/_popup-add-order.html')
+        @@include('./component/popups/_popup-main-menu.html')
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>

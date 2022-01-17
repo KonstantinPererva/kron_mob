@@ -1,0 +1,10 @@
+.m-button-main-menu-list {
+  padding: 4px 8px;
+  margin-bottom: 20px;
+
+  &__item {
+    & + & {
+      margin-top: 10px;
+    }
+  }
+}

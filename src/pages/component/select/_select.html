@@ -1,10 +1,10 @@
-<div class="select @@if(context.className){@@className}">
-    <div class="select__title">@@title</div>
+<div class="m-select @@if(context.className){@@className}">
+    <div class="m-select__title">@@title</div>
 
-    <input type="hidden" class="select__input" value="" />
+    <input type="hidden" class="m-select__input" value="" />
 
-    <div class="select__box">
-        <div class="select__text" data-button="toggle">
+    <div class="m-select__box">
+        <div class="m-select__text" data-button="toggle">
             <span>@@text</span>
 
             <div class="indicator" data-indicator="button">
@@ -14,9 +14,9 @@
             </div>
         </div>
 
-        <div class="select__dropdown" style="display: none">
+        <div class="m-select__dropdown" style="display: none">
             @@for(var i = 0; i < option.length; i++) {
-                <div class="select__option">
+                <div class="m-select__option">
                     <span>`+option[i]+`</span>
                 </div>
             }

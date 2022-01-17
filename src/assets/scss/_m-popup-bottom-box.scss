@@ -1,0 +1,21 @@
+.m-popup-bottom-box {
+  background: #fff;
+  padding: 10px 8px 2px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    & + & {
+      margin-top: 4px;
+    }
+  }
+
+  &__col {
+    width: calc(50% - 2px);
+  }
+
+  &__block {
+    padding: 8px 0;
+  }
+}

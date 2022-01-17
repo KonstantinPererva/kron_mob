@@ -15,12 +15,11 @@
     <!-- MAIN -->
     <main class="m-main">
         @@include('./component/panel/_panel.html', {
-        "title":"Взаиморасчеты",
-        "item": ""
+        "title":"Взаиморасчеты"
         })
         <!-- CONTAINER -->
         <div class="m-container">
-            <div class="box-wrapper">
+            <div class="m-box-wrapper">
                 <div class="__innerCalc">
                     <!-- ORDERS -->
                     @@include('./component/card/_card-mutual.html', {
@@ -56,7 +55,7 @@
                     ]})
                 </div>
 
-                <div class="box-buttons -flex -double">
+                <div class="m-box-buttons -flex -double">
                     <div class="__wrapper">
                         <div class="m-button-main -orange -fz-16 -br-2"><span>Сформировать</span></div>
                     </div>

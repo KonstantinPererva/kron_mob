@@ -1,0 +1,28 @@
+.m-card-title {
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: $c-text-main;
+
+  .card-refunds & {
+    width: calc(100% - 26px);
+  }
+
+  &__text {
+    .card-refunds & {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+}

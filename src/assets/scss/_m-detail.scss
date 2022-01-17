@@ -1,0 +1,63 @@
+.m-detail {
+  padding-bottom: 50px;
+
+  &__button {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    padding: 5px 8px;
+    background: #fff;
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    margin: 10px 0;
+    padding-top: 57%;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #545454;
+    margin: 10px 0;
+  }
+
+  &__manufacturer {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: $c-m-blue;
+    margin: 10px 0;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+
+    & > & {
+      justify-content: flex-start;
+      margin: 0;
+    }
+  }
+
+  &__price {
+
+  }
+}

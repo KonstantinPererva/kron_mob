@@ -197,7 +197,7 @@ const transitionAnimation = 300;
 const orderInfoSubstrate = document.querySelector('[data-substrate="order-info"]');
 
 if (orderInfoSubstrate && document.querySelector('.order-info')) {
-    const orderInfo = new ToggleBoxSlide('.order-info', {
+    const orderInfo = new ToggleBoxSlide('.m-order-info', {
         transition: transitionAnimation,
         btnToggle: '[data-button="order-info"]',
         transitionOpen: () => {

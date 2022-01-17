@@ -4,4 +4,10 @@
     @@if(context.item){
         <div class="m-panel__right">@@item</div>
     }
+
+    @@if(context.button === 'close'){
+        <div class="m-panel__right">
+            @@include('../close/_close.html')
+        </div>
+    }
 </div>
