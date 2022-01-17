@@ -2,9 +2,9 @@ function ToggleBoxSlide(selector, opt = {}) {
     const self = this;
     self.defaultOption = {
         transition: 200,
-        btnToggle: '[data-button="toggle"]',
-        btnOpen: '[data-button="open"]',
-        btnClose: '[data-button="close"]',
+        btnToggle: null,//'[data-button="toggle"]',
+        btnOpen:  null,//'[data-button="open"]',
+        btnClose:  null,//'[data-button="close"]',
         btnIndicatorOpen: '[data-indicator="button"]',
         btnIndicatorClose: '[data-indicator="button"]',
         btnIndicatorToggle: '[data-indicator="button"]',
@@ -153,26 +153,26 @@ function ToggleBoxSlide(selector, opt = {}) {
     if (self.buttonToggle && self.option.initialBtn) {
         self.buttonToggle.addEventListener('click', () => {
             if (self.option.isOpen === false) {
-                openBox();
-                indicatorStatusOpen();
+                self.openBox();
+                self.indicatorStatusOpen();
             } else {
-                closeBox();
-                indicatorStatusClose();
+                self.closeBox();
+                self.indicatorStatusClose();
             }
         });
     }
 
     if (self.buttonOpen && self.option.initialBtn) {
         self.buttonOpen.addEventListener('click', () => {
-            openBox();
-            indicatorStatusOpen();
+            self.openBox();
+            self.indicatorStatusOpen();
         });
     }
 
     if (self.buttonClose && self.option.initialBtn) {
         self.buttonClose.addEventListener ('click', () => {
-            closeBox();
-            indicatorStatusClose();
+            self.closeBox();
+            self.indicatorStatusClose();
         });
     }
 
@@ -192,11 +192,12 @@ function ToggleBoxSlide(selector, opt = {}) {
 }
 
 //
-
+//Global transition for animation
 const transitionAnimation = 300;
+
 const orderInfoSubstrate = document.querySelector('[data-substrate="order-info"]');
 
-if (orderInfoSubstrate && document.querySelector('.order-info')) {
+if (orderInfoSubstrate && document.querySelector('.m-order-info')) {
     const orderInfo = new ToggleBoxSlide('.m-order-info', {
         transition: transitionAnimation,
         btnToggle: '[data-button="order-info"]',
@@ -211,23 +212,25 @@ if (orderInfoSubstrate && document.querySelector('.order-info')) {
     });
 }
 
-// orderInfo.open();
 
-const selectList = document.querySelectorAll('.select');
+
+const selectList = document.querySelectorAll('.m-select');
 
 if (selectList.length) {
     for (let i = 0; i < selectList.length; i++) {
-        selectList[i].btn = selectList[i].querySelector('.select__text');
-        selectList[i].box = selectList[i].querySelector('.select__dropdown');
+        selectList[i].btn = selectList[i].querySelector('[data-button="toggle"]');
+        selectList[i].box = selectList[i].querySelector('.m-select__dropdown');
 
-        selectList[i].select = new ToggleBoxSlide(selectList[i].box, {
+        selectList[i].sel = new ToggleBoxSlide(selectList[i].box, {
             transition: transitionAnimation,
             btnToggle: selectList[i].btn,
             transitionOpen: () => {
                 selectList[i].style.zIndex = "1";
             },
             transitionClose: () => {
-                setTimeout(() => {selectList[i].style.zIndex = "0";}, transitionAnimation);
+                setTimeout(() => {
+                    selectList[i].style.zIndex = "0";
+                }, transitionAnimation);
             },
             initialBtn: false
         })
@@ -237,20 +240,20 @@ if (selectList.length) {
         selectList[i].btn.addEventListener('click', (e) => {
             let active = false;
 
-            if (selectList[i].select.isOpen()) {
-                selectList[i].select.close();
+            if (selectList[i].sel.isOpen()) {
+                selectList[i].sel.close();
             } else {
                 for(let k = 0; k < selectList.length; k++) {
-                    if (selectList[k].select.isOpen()) {
-                        selectList[k].select.close();
+                    if (selectList[k].sel.isOpen()) {
+                        selectList[k].sel.close();
                         active = true;
                     }
                 }
 
                 if (active) {
-                    setTimeout(() => {selectList[i].select.open();}, transitionAnimation);
+                    setTimeout(() => {selectList[i].sel.open();}, transitionAnimation);
                 } else {
-                    selectList[i].select.open();
+                    selectList[i].sel.open();
                 }
 
             }
