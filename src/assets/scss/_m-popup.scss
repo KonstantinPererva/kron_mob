@@ -11,6 +11,10 @@
     height: calc(100% - 60px);
   }
 
+  &.-search__ {
+    top: 101px;
+    height: calc(100% - 101px);
+  }
 
   &__header {
     position: fixed;
@@ -36,6 +40,10 @@
     background: #fff;
     height: 100%;
     padding: 50px 0 0;
+  }
+
+  &.-search__ &__main {
+    padding: 0;
   }
 
   &__panel {
@@ -66,5 +74,10 @@
       overflow-y: auto;
       overflow-x: hidden;
     }
+  }
+
+  &.-search__ &__content {
+    height: 100%;
+    top: 0;
   }
 }

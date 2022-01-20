@@ -212,8 +212,6 @@ if (orderInfoSubstrate && document.querySelector('.m-order-info')) {
     });
 }
 
-
-
 const selectList = document.querySelectorAll('.m-select');
 
 if (selectList.length) {
@@ -260,3 +258,129 @@ if (selectList.length) {
         })
     }
 }
+
+$('.m-button-menu').on('click', function () {
+    $(this).next('.m-menu-list').slideToggle(200);
+    $(this).find('.m-button-menu__icon').toggleClass('statusOpen');
+})
+
+$('.m-filter-box__hold').on('click', function () {
+    $(this).next('.m-filter-list').slideToggle(200);
+    $(this).find('.m-filter-box__indicator').toggleClass('statusOpen');
+})
+
+$('.m-header__hamburger').on('click', function () {
+    $('[data-popup="main-menu"]').fadeIn();
+});
+
+$('[data-close="main-menu"]').on('click', function () {
+    $('[data-popup="main-menu"]').fadeOut();
+});
+
+$('.m-button-filter').on('click', function () {
+    $('[data-popup="filter"]').fadeIn();
+});
+
+$('[data-close="filter"]').on('click', function () {
+    $('[data-popup="filter"]').fadeOut();
+});
+
+$('.m-button-add-order').on('click', function () {
+    $('[data-popup="add_goods"]').fadeIn();
+});
+
+$('[data-close="add_goods"]').on('click', function () {
+    $('[data-popup="add_goods"]').fadeOut();
+});
+
+
+
+//scaner
+// function onScanSuccess(decodedText, decodedResult) {
+//     // handle the scanned code as you like, for example:
+//     console.log(`Code matched = ${decodedText}`, decodedResult);
+// }
+//
+// function onScanFailure(error) {
+//     // handle scan failure, usually better to ignore and keep scanning.
+//     // for example:
+//     console.warn(`Code scan error = ${error}`);
+// }
+//
+// let html5QrcodeScanner = new Html5QrcodeScanner(
+//     "reader",
+//     { fps: 10, qrbox: {width: 250, height: 250} },
+//     /* verbose= */ false);
+// html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+
+
+let resultContainer = document.getElementById('qr-reader-results');
+let lastResult;
+
+function onScanSuccess(decodedText, decodedResult) {
+    if (decodedText !== lastResult) {
+
+        lastResult = decodedText;
+        // Handle on success condition with the decoded message.
+        console.log(`Scan result ${decodedText}`, decodedResult);
+
+        resultContainer.innerHTML = decodedResult.result.format.formatName + " " + decodedResult.result.text;
+    }
+}
+
+let html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 30, qrbox: {width: 250, height: 250} }, false);
+html5QrcodeScanner.render(onScanSuccess);
+
+
+//open search
+$('.m-button-search').on('click', function () {
+    $('.m-search').slideToggle('200', function () {
+        $('.m-main').toggleClass('m-main_search');
+    });
+});
+
+//m-search-button
+$('.m-search-button').on('click', function () {
+    $(this).toggleClass('-active__').siblings('.m-search-button').fadeToggle('200');
+
+    $('.m-search__input').toggleClass('-active').focus();
+});
+
+//m-search-button
+$('[data-search="scanner"]').on('click', function () {
+    $('[data-popup="scanner"]').fadeToggle('200');
+});
+
+//Search voice
+function mobileSearchVoice() {
+    const field = document.querySelector('.m-search__input');
+    const btn = document.querySelector('[data-search="voice"]');
+    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    let isTextField = false;
+
+    const recognition = new window.SpeechRecognition();
+    recognition.interimResults = true;
+
+    recognition.addEventListener('result', (e) => {
+        field.value = e.results[0][0].transcript;
+
+        if(e.results[0].isFinal) {
+            isTextField = true;
+        }
+    });
+
+    btn.addEventListener('click', () => {
+        field.value = "Говорите...";
+        isTextField = false;
+        recognition.start();
+    })
+
+    recognition.addEventListener('end', () => {
+        if (!isTextField) {
+            field.value = "";
+        }
+    })
+}
+
+mobileSearchVoice();
