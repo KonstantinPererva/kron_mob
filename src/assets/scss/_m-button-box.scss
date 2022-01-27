@@ -1,8 +1,10 @@
 .m-button-box {
+  display: block;
   width: 76px;
   height: 46px;
   background: #fff;
   text-align: center;
+  outline: none;
 
   &__icon {
     width: 25px;

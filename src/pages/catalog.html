@@ -13,9 +13,6 @@
 <!-- HEADER -->
         @@include('./component/header/_header.html')
 <!-- MAIN -->
-<!--        добавляется класс m-main_search если открывается блок с поиском
-        <main class="m-main m-main_search">
--->
         <main class="m-main">
             @@include('./component/panel/_panel-breadcrumbs.html', {
                 "items": [
@@ -29,14 +26,6 @@
                     }
                 ]
             })
-<!--            <script-->
-<!--                    src="https://code.jquery.com/jquery-3.6.0.min.js"-->
-<!--                    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="-->
-<!--                    crossorigin="anonymous"></script>-->
-<!--            <input type="file" accept="image/*" capture="camera" style="width: 150px; height: 50px;background: #000;">-->
-<!--            <input type="text" x-webkit-speech />-->
-
-
 <!-- CONTAINER -->
             <div class="m-container">
 <!-- FILTER INFO -->
@@ -53,7 +42,6 @@
                 }
                 ]
                 })
-
 <!-- CATALOG -->
                 @@include('./component/card/_card.html', {
                 "items": [
@@ -104,10 +92,8 @@
                 ]})
             </div>
         </main>
-
 <!-- FOOTER -->
         @@include('./component/footer/_footer.html')
-
 <!-- POPUPS -->
         @@include('./component/popups/_popup-filter.html')
         @@include('./component/popups/_popup-add-order.html')

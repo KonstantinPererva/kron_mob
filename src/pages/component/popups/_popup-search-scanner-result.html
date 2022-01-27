@@ -1,0 +1,53 @@
+<div class="m-popup -search__" data-popup="scanner-result" style="display: none">
+    <div class="m-popup__main">
+        <div class="m-popup__panel">
+            <span>Результаты поиска по штрих коду</span>
+
+            @@include('../close/_close.html', {"data":"scanner-result"})
+        </div>
+
+        <div class="m-popup__content">
+            <div class="m-search-result">
+                @@include('../card/_card.html', {
+                "items": [
+                {
+                title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                manufacturer: 'Doctor Marcus, Польша',
+                code: '031289',
+                package: '100',
+                remainder: '3',
+                num: 'BM-ZA1102',
+                price: '12 155.15 грн'
+                },
+                {
+                title:'Ароматизаторы воздуха',
+                manufacturer: 'Doctor Marcus, Польша',
+                code: '032549',
+                package: '150',
+                remainder: '102',
+                num: 'BM-ZA1162',
+                price: '11 195.64 грн'
+                },
+                {
+                title:'Автомобильный освежитель воздуха AIR SURF Black ',
+                manufacturer: 'Doctor Marcus, Польша',
+                code: '031289',
+                package: '100',
+                remainder: '3',
+                num: 'BM-ZA1102',
+                price: '12 155.15 грн'
+                },
+                {
+                title:'Ароматизаторы воздуха',
+                manufacturer: 'Doctor Marcus, Польша',
+                code: '032549',
+                package: '150',
+                remainder: '102',
+                num: 'BM-ZA1162',
+                price: '11 195.64 грн'
+                }
+                ]})
+            </div>
+        </div>
+    </div>
+</div>

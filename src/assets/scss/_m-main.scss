@@ -2,9 +2,8 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  transition: padding 200ms;
 
-  &_search {
+  &.-increasedIndent {
     padding-top: 51px;
   }
 }

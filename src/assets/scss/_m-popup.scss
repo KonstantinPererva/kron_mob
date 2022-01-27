@@ -77,7 +77,9 @@
   }
 
   &.-search__ &__content {
-    height: 100%;
-    top: 0;
+    height: calc(100% - 36px);
+    top: 36px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }

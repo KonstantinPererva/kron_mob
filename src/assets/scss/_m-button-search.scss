@@ -4,4 +4,20 @@
   justify-content: center;
   width: 26px;
   height: 26px;
+
+  & .__icon-close {
+    display: none;
+  }
+
+  & .__icon-open {
+    display: block;
+  }
+
+  &.-active__ .__icon-close {
+    display: block;
+  }
+
+  &.-active__ .__icon-open {
+    display: none;
+  }
 }

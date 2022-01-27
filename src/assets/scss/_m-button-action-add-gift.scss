@@ -1,0 +1,19 @@
+.m-button-action-add-gift {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 18px;
+  background-color: #344E9F;
+  color: #fff;
+  font-size: 9px;
+  line-height: 14px;
+  user-select: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0 3px;
+
+  &:disabled {
+    background-color: #C4C4C4;
+  }
+}

@@ -197,7 +197,8 @@ const transitionAnimation = 300;
 
 const orderInfoSubstrate = document.querySelector('[data-substrate="order-info"]');
 
-if (orderInfoSubstrate && document.querySelector('.m-order-info')) {
+if (orderInfoSubstrate && document.querySelector('.m-order-info'))
+{
     const orderInfo = new ToggleBoxSlide('.m-order-info', {
         transition: transitionAnimation,
         btnToggle: '[data-button="order-info"]',
@@ -259,6 +260,8 @@ if (selectList.length) {
     }
 }
 
+
+
 $('.m-button-menu').on('click', function () {
     $(this).next('.m-menu-list').slideToggle(200);
     $(this).find('.m-button-menu__icon').toggleClass('statusOpen');
@@ -268,6 +271,8 @@ $('.m-filter-box__hold').on('click', function () {
     $(this).next('.m-filter-list').slideToggle(200);
     $(this).find('.m-filter-box__indicator').toggleClass('statusOpen');
 })
+
+
 
 $('.m-header__hamburger').on('click', function () {
     $('[data-popup="main-menu"]').fadeIn();
@@ -294,72 +299,37 @@ $('[data-close="add_goods"]').on('click', function () {
 });
 
 
+//Search scanner
+function SearchScanner()
+{
+    let resultContainer = document.getElementById('qr-reader-results');
+    let lastResult;
 
-//scaner
-// function onScanSuccess(decodedText, decodedResult) {
-//     // handle the scanned code as you like, for example:
-//     console.log(`Code matched = ${decodedText}`, decodedResult);
-// }
-//
-// function onScanFailure(error) {
-//     // handle scan failure, usually better to ignore and keep scanning.
-//     // for example:
-//     console.warn(`Code scan error = ${error}`);
-// }
-//
-// let html5QrcodeScanner = new Html5QrcodeScanner(
-//     "reader",
-//     { fps: 10, qrbox: {width: 250, height: 250} },
-//     /* verbose= */ false);
-// html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+    function onScanSuccess(decodedText, decodedResult) {
+        if (decodedText !== lastResult) {
 
+            lastResult = decodedText;
 
-let resultContainer = document.getElementById('qr-reader-results');
-let lastResult;
+            resultContainer.innerHTML = '<div class="wr-result-scanner-code"><div class="__type">Тип: ' + decodedResult.result.format.formatName + '</div><div class="__code">Код: ' + decodedResult.result.text + '</div></div>';
 
-function onScanSuccess(decodedText, decodedResult) {
-    if (decodedText !== lastResult) {
-
-        lastResult = decodedText;
-        // Handle on success condition with the decoded message.
-        console.log(`Scan result ${decodedText}`, decodedResult);
-
-        resultContainer.innerHTML = decodedResult.result.format.formatName + " " + decodedResult.result.text;
+            $('.m-search__input').val(decodedResult.result.text);
+        }
     }
+
+    let html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 30, qrbox: {width: 250, height: 250} }, false);
+    html5QrcodeScanner.render(onScanSuccess);
 }
 
-let html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 30, qrbox: {width: 250, height: 250} }, false);
-html5QrcodeScanner.render(onScanSuccess);
-
-
-//open search
-$('.m-button-search').on('click', function () {
-    $('.m-search').slideToggle('200', function () {
-        $('.m-main').toggleClass('m-main_search');
-    });
-});
-
-//m-search-button
-$('.m-search-button').on('click', function () {
-    $(this).toggleClass('-active__').siblings('.m-search-button').fadeToggle('200');
-
-    $('.m-search__input').toggleClass('-active').focus();
-});
-
-//m-search-button
-$('[data-search="scanner"]').on('click', function () {
-    $('[data-popup="scanner"]').fadeToggle('200');
-});
-
 //Search voice
-function mobileSearchVoice() {
+function SearchVoice()
+{
     const field = document.querySelector('.m-search__input');
     const btn = document.querySelector('[data-search="voice"]');
-    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
     let isTextField = false;
 
-    const recognition = new window.SpeechRecognition();
+    const recognition = new SpeechRecognition();
     recognition.interimResults = true;
 
     recognition.addEventListener('result', (e) => {
@@ -371,16 +341,79 @@ function mobileSearchVoice() {
     });
 
     btn.addEventListener('click', () => {
-        field.value = "Говорите...";
+        field.value = "";
+        field.placeholder = "Говорите...";
         isTextField = false;
         recognition.start();
     })
 
     recognition.addEventListener('end', () => {
         if (!isTextField) {
-            field.value = "";
+            field.placeholder = "Введите поисковый запрос";
         }
+        statusStatic();
     })
 }
 
-mobileSearchVoice();
+SearchVoice();
+
+
+//open/close search
+$('.m-button-search').on('click', function () {
+    if ($(this).is('.-active__')) {
+        $(this).removeClass('-active__');
+        $('.m-search').fadeOut('0', function () {
+            $('.m-main').removeClass('-increasedIndent');
+        });
+    } else {
+        $(this).addClass('-active__');
+        $('.m-search').fadeIn('0');
+        $('.m-main').addClass('-increasedIndent');
+    }
+});
+
+//m-search-button
+$('.m-search-button').on('click', function () {
+    statusActive($(this));
+});
+
+//m-search-button scanner
+$('[data-search="scanner"]').on('click', function () {
+    $('[data-popup="scanner"]').fadeIn('200');
+    SearchScanner();
+});
+
+//m-search-button scanner
+$('[data-close="scanner"]').on('click', function () {
+    $('[data-popup="scanner"]').fadeOut('200');
+    statusStatic();
+});
+
+//m-search-button history
+$('[data-search="history"]').on('click', function () {
+    $('[data-popup="history"]').fadeIn('200');
+});
+
+//button close history
+$('[data-close="history"]').on('click', function () {
+    $('[data-popup="history"]').fadeOut('200');
+    statusStatic();
+});
+
+$('.m-button-duty-pay').on('click', function () {
+    $('[data-popup="pay_duty"]').fadeIn('200');
+})
+
+$('[data-close="pay_duty"]').on('click', function () {
+    $('[data-popup="pay_duty"]').fadeOut('200');
+})
+
+function statusStatic() {
+    $('.m-search-button').removeClass('-active__').removeClass('-hide');
+}
+
+function statusActive(button) {
+    $('.m-search-button').addClass('-hide');
+    button.addClass('-active__').removeClass('-hide');
+}
+

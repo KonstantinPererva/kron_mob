@@ -1,4 +1,82 @@
 .m-box-scanner {
   height: 100%;
   overflow-y: auto;
+
+  & #reader__dashboard_section_swaplink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    color: $c-m-blue;
+    border: 1px solid $c-m-blue;
+    background: #fff;
+    text-decoration: none !important;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+  
+  & #reader > div:first-of-type img {
+    display: none;
+  }
+
+  & #reader__dashboard_section_csr > div button {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    background: #fff;
+    border: 1px solid $c-m-blue;
+    color: $c-m-blue;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+
+  & #reader__dashboard_section_csr > div:first-of-type button {
+    background: $c-m-blue;
+    border: 1px solid $c-m-blue;
+    color: #fff;
+  }
+
+  & #reader__dashboard_section_csr > div + div {
+    margin-top: 10px;
+  }
+
+  & #reader__dashboard_section_fsr {
+    position: relative;
+    width: 203px;
+    margin-left: auto;
+    margin-right: auto;
+
+    & > input {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100% !important;
+      height: 100%;
+      z-index: 1;
+    }
+
+    & > span {
+      display: none;
+    }
+
+    &:after {
+      content: "Выберите файл";
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      background: $c-m-blue;
+      border: 1px solid $c-m-blue;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: 700;
+    }
+  }
+
+  & #reader {
+    margin-bottom: 16px;
+  }
 }

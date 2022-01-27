@@ -16,10 +16,12 @@
       fill: $c-m-blue;
     }
   }
+  
+  &.-hide {
+    display: none;
+  }
 
   &.input-search {
-    flex-grow: 1;
-    opacity: 0;
-    transition: opacity 200ms;
+    display: none;
   }
 }
