@@ -1,5 +1,8 @@
 .m-container {
   flex-grow: 1;
   position: relative;
+  height: calc(100% - 36px);
   padding: 10px 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }

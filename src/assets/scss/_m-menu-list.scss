@@ -1,5 +1,7 @@
 .m-menu-list {
-  margin-top: 10px;
+  & & {
+    margin-top: 10px;
+  }
 
   &__item + &__item {
     margin-top: 10px;
